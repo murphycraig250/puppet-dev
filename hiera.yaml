@@ -1,0 +1,13 @@
+version: 5
+
+defaults:
+  datadir: data
+  data_hash: yaml_data
+
+hierarchy:
+  - name: "Per node data" 
+    path: "nodes/%{networking.hostname}.yaml"
+  - name: "OS Specific"
+    path: "%{facts.os.family}.yaml"
+  - name: "Module data"
+    path: "modules/%{module_data}"

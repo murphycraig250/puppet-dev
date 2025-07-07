@@ -1,0 +1,12 @@
+roles::default_role: 'role::windows_base'
+packages:
+  chocolatey:
+    include:
+      vlc: {}
+      firefox: {}
+      7zip.install: {}
+      notepadplusplus.install: {}
+      git.install:
+        version: absent
+      googlechrome:
+        install_options: ['--ignorechecksum']
